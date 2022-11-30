@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import GlobalStyle from "../GlobalStyles";
-import logo from "../img/logo.png"
+import logo from "../assets/logo.png";
 
 export default function PaginaInicial(props){
 
