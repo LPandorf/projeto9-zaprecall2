@@ -1,11 +1,10 @@
-
+import { useState } from "react";
+import PaginaInicial from "./components/PaginaInicial";
+import PaginaPerguntas from "./components/PaginaPerguntas";
 
 export default function App() {
-  return (
-    <Jogo>
-      ZapRecall
-    </Jogo>
-  )
+  const [botao,setBotao] = useState(false);
+  return (botao===true?<PaginaPerguntas/>:<PaginaInicial setBotao={setBotao}/>);
 }
 
 
