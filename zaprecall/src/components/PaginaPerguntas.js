@@ -16,10 +16,10 @@ export default function PaginaPerguntas(){
         
     )
 }
-
+//background: #FB6B6B;
 const Wrapper=styled.div`
     box-sizing: border-box;
-    background: #FB6B6B;
+    background: purple;
     min-height: 100vh;
     top: 0;
     left: 0;

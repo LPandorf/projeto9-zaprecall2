@@ -13,8 +13,11 @@ export default function Header(){
 const Wrapper=styled.div`
     display:flex;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom:40px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    background: #FB6B6B;
+    width:100%;
 `
 const Logo=styled.img`
     width: 52px;
