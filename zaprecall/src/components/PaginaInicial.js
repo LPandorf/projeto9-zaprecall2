@@ -62,4 +62,11 @@ const Botao=styled.button`
     border: 1px solid #D70900;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px
+    text-align: center;
+    color: #D70900;
 `
