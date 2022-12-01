@@ -49,12 +49,12 @@ export default function PerguntaIndividual(props) {
 
     if (estadoDaCarta === 0) {
         //fechado
-        return <Carta ><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}}>Pergunta {props.index + 1}</Pergunta><img src={icone} onClick={() => setestadoDaCarta(1)} /></Carta>
+        return <Carta ><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}}>Pergunta {props.index + 1}</Pergunta><img src={icone} alt="icone" onClick={() => setestadoDaCarta(1)} /></Carta>
 
     } else {
         if (estadoDaCarta === 1) {
             //pergunta
-            return <CartaAberta > {props.item.Q}<img src={virar} onClick={() => setestadoDaCarta(2)} /></CartaAberta>
+            return <CartaAberta > {props.item.Q}<img src={virar} alt="virar" onClick={() => setestadoDaCarta(2)} /></CartaAberta>
 
         } else {
             if (estadoDaCarta === 2) {
