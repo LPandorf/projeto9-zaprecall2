@@ -11,6 +11,7 @@ export default function Header(){
 }
 
 const Wrapper=styled.div`
+    position: fixed;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -18,6 +19,7 @@ const Wrapper=styled.div`
     padding-bottom:10px;
     background: #FB6B6B;
     width:100%;
+    z-index: 1;
 `
 const Logo=styled.img`
     width: 52px;

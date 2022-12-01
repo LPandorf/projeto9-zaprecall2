@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Perguntas from "./Perguntas";
 
 export default function PaginaPerguntas(){
     const [feitos, setFeitos]= useState(0)
@@ -10,16 +11,18 @@ export default function PaginaPerguntas(){
         <Wrapper>
             <GlobalStyle/>
             <Header/>
-            <h1>PaginaPerguntas</h1>
+            <Margem>
+            <Perguntas/>
+            </Margem>
             <Footer feitos={feitos}/>
         </Wrapper>
         
     )
 }
-//background: #FB6B6B;
+//background: ;purple
 const Wrapper=styled.div`
     box-sizing: border-box;
-    background: purple;
+    background: #FB6B6B;
     min-height: 100vh;
     top: 0;
     left: 0;
@@ -28,4 +31,8 @@ const Wrapper=styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
+`
+const Margem=styled.div`
+    margin-top: 90px;
+    margin-bottom:80px;
 `
