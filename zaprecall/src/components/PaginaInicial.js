@@ -13,7 +13,7 @@ export default function PaginaInicial(props){
             <Tela>
                 <Logo><img src={logo} alt="logo"/></Logo>
                 <Titulo>Zap Recall</Titulo>
-                <Botao onClick={BotaoIniciar} >Iniciar Recall!</Botao>
+                <Botao onClick={BotaoIniciar} data-test="start-btn">Iniciar Recall!</Botao>
             </Tela>
         </Wrapper>
     )

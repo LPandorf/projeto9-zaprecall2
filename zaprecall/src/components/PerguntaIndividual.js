@@ -49,26 +49,26 @@ export default function PerguntaIndividual(props) {
 
     if (estadoDaCarta === 0) {
         //fechado
-        return <Carta ><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}}>Pergunta {props.index + 1}</Pergunta><img src={icone} alt="icone" onClick={() => setestadoDaCarta(1)} /></Carta>
+        return <Carta ><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}} data-test="flashcard-text" >Pergunta {props.index + 1}</Pergunta><img src={icone} alt="icone" onClick={() => setestadoDaCarta(1)} data-test="play-btn" /></Carta>
 
     } else {
         if (estadoDaCarta === 1) {
             //pergunta
-            return <CartaAberta > {props.item.Q}<img src={virar} alt="virar" onClick={() => setestadoDaCarta(2)} /></CartaAberta>
+            return <CartaAberta data-test="flashcard-text"> {props.item.Q}<img src={virar} alt="virar" onClick={() => setestadoDaCarta(2)} data-test="turn-btn" /></CartaAberta>
 
         } else {
             if (estadoDaCarta === 2) {
                 //gabarito
                 return (
-                    <CartaTres>{props.item.R}
+                    <CartaTres data-test="flashcard-text" >{props.item.R}
                         <Lado>
-                            <Vermelho onClick={()=>mudarCor("red") /setestadoDaCarta(0)/props.setconcluidos(1)}>
+                            <Vermelho onClick={()=>mudarCor("red") /setestadoDaCarta(0)/props.setconcluidos(1)} data-test="no-btn" >
                                 Não Lembrei
                             </Vermelho>
-                            <Orange onClick={()=>mudarCor("orange") /setestadoDaCarta(0)/props.setconcluidos(1)}>
+                            <Orange onClick={()=>mudarCor("orange") /setestadoDaCarta(0)/props.setconcluidos(1)} data-test="partial-btn" >
                                 Quase não lembrei
                             </Orange>
-                            <Verde onClick={()=>mudarCor("green") /setestadoDaCarta(0)/props.setconcluidos(1)}>
+                            <Verde onClick={()=>mudarCor("green") /setestadoDaCarta(0)/props.setconcluidos(1)} data-test="zap-btn" >
                                 Zap!
                             </Verde>
                         </Lado>
@@ -80,8 +80,8 @@ export default function PerguntaIndividual(props) {
 }
 
 const Pergunta = styled.div`
-    color: ${(props)=>props.cor};
-`
+    
+`//color:${(props)=>props.cor}
 
 const Carta = styled.div`
     position: relative;
@@ -101,8 +101,6 @@ const Carta = styled.div`
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    
-
 `
 const CartaAberta=styled.div`
     width: 300px;
@@ -129,21 +127,21 @@ const CartaAberta=styled.div`
     }
 `
 const CartaTres = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 15px;
-width: 300px;
-margin: 12px;
-background: #FFFFD5;
-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-border-radius: 5px;
-font-family: 'Recursive';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 22px;
-color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    width: 300px;
+    margin: 12px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
 `
 
 const Lado = styled.div`

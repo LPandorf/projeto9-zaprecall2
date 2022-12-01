@@ -7,7 +7,7 @@ export default function Pergunta({setconcluidos,recebeContador}) {
     return (
         <Wrapper>
             {cards.map((item, index) => {
-                return (<><PerguntaIndividual key={index} item={item} index={index} setconcluidos={()=>recebeContador()} /></>)
+                return (<><PerguntaIndividual key={index} item={item} index={index} setconcluidos={()=>recebeContador()} data-test="flashcard" /></>)
             })}
         </Wrapper>
     )
