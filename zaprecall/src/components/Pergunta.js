@@ -1,21 +1,35 @@
+import { useState } from "react";
 import styled from "styled-components";
 import play from "../assets/seta_play.png";
 import virar from "../assets/seta_virar.png";
 
 export default function Pergunta({numero, cardAberto, estaAberto, question, answer,}){
+    const [virado,setVirado]= useState(false);
     return (
         <>
-            {!estaAberto ?(
+            {estaAberto ?(
+                <>
+                {virado ? (
+                    <Resposta>
+                        <p>respostinha</p>
+                        <Botoes>
+                            <Vermelho>Não Lembrei</Vermelho>
+                            <Amarelo>Quase não lembrei</Amarelo>
+                            <Verde>Zap!</Verde>
+                        </Botoes>
+                     </Resposta>
+                ):(
+                    <Aberta>
+                        {question}
+                        <img src={virar} alt="virar" onClick={()=>setVirado(true)}/>
+                    </Aberta>
+                )}
+                </>
+            ):(
                 <Fechada cor={"#333333"}>
                 <p>Pergunta {numero+1}</p>
                 <img src={play} alt="play" onClick={cardAberto}/>
-
                 </Fechada>
-            ):(
-                <Aberta>
-                {question}
-                <img src={virar} alt="virar"/>
-                </Aberta>
             )}
             
             
