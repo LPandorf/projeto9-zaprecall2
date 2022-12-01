@@ -9,17 +9,18 @@ export default function Header(){
         </Wrapper>
     )
 }
-
+//
 const Wrapper=styled.div`
+    top: 0;
     position: fixed;
     display:flex;
     align-items: center;
     justify-content: center;
     padding-top: 10px;
     padding-bottom:10px;
-    background: #FB6B6B;
     width:100%;
     z-index: 1;
+    background: #FB6B6B;
 `
 const Logo=styled.img`
     width: 52px;

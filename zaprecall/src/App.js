@@ -1,10 +1,10 @@
 import { useState } from "react";
 import PaginaInicial from "./components/PaginaInicial";
-import PaginaPerguntas from "./components/PaginaPerguntas";
+import Perguntas from "./components/Perguntas";
 
 export default function App() {
   const [botao,setBotao] = useState(false);
-  return (botao===true?<PaginaPerguntas/>:<PaginaInicial setBotao={setBotao}/>);
+  return (botao===true?<Perguntas/>:<PaginaInicial setBotao={setBotao}/>);
 }
 
 
