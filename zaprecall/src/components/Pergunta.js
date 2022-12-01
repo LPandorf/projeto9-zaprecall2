@@ -4,11 +4,6 @@ import cards from "./Cards";
 import styled from 'styled-components';
 
 export default function Pergunta({setconcluidos,recebeContador}) {
-    
-
-
-    
-
     return (
         <Wrapper>
             {cards.map((item, index) => {
@@ -18,7 +13,7 @@ export default function Pergunta({setconcluidos,recebeContador}) {
     )
 
 }
-//
+
 const Wrapper=styled.div`
     margin-top: 80px;
     background-color: #FB6B6B;
@@ -28,27 +23,3 @@ const Wrapper=styled.div`
     align-items: center;
     margin-bottom: 80px;
 `
-
-
-/*import styled from "styled-components";
-import cards from "./Cards";
-import Pergunta from "./Pergunta";
-
-
-export default function Perguntas({recebeContador}){
-
-
-    
-
-    return (
-        <Wrapper>
-            {cards.map((item,  index)=>{
-                return (<><Pergunta key={index} item={item} index={index} setconcluidos={()=>recebeContador()} /></>)
-            })}
-        </Wrapper>
-    )
-}
-
-const Wrapper=styled.div`
-    
-`*/

@@ -6,6 +6,3 @@ export default function App() {
   const [botao,setBotao] = useState(false);
   return (botao===true?<Perguntas/>:<PaginaInicial setBotao={setBotao}/>);
 }
-
-
-

@@ -9,7 +9,6 @@ export default function Header(){
         </Wrapper>
     )
 }
-//
 const Wrapper=styled.div`
     top: 0;
     position: fixed;
