@@ -17,6 +17,7 @@ export default function PerguntaIndividual(props) {
     const [linha, setlinha]= useState("none");
     const [contador, setcontador]= useState(0);
     const [icone, seticone]= useState(seta);
+    const [data, setData]= useState("flashcard-text");
     //const [concluidos,setconcluidos]= useState(0);
 
     function mudarCor(color){
@@ -29,18 +30,21 @@ export default function PerguntaIndividual(props) {
             setcor("green");
             setlinha("line-through");
             seticone(acerto);
+            setData("zap-icon");
         }else{
             if(color==="red"){
                 //#FF3030
                 setcor("red");
                 setlinha("line-through");
                 seticone(erro);
+                setData("no-icon");
             }else {
                 if(color==="orange"){
                     //#FF922E
                     setcor("orange");
                     setlinha("line-through");
                     seticone(quase);
+                    setData("partial-icon");
                 }
             }
         }
@@ -49,7 +53,7 @@ export default function PerguntaIndividual(props) {
 
     if (estadoDaCarta === 0) {
         //fechado
-        return <Carta ><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}} data-test="flashcard-text" >Pergunta {props.index + 1}</Pergunta><img src={icone} alt="icone" onClick={() => setestadoDaCarta(1)} data-test="play-btn" /></Carta>
+        return <Carta ><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}} data-test={data} >Pergunta {props.index + 1}</Pergunta><img src={icone} alt="icone" onClick={() => setestadoDaCarta(1)} data-test="play-btn" /></Carta>
 
     } else {
         if (estadoDaCarta === 1) {
