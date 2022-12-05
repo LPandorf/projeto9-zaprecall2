@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Footer(props){
     return (
-        <Wrapper>
+        <Wrapper data-test="footer">
             <Concluidos>{props.feitos}/8 CONCLUÍDOS</Concluidos>
         </Wrapper>
     )
