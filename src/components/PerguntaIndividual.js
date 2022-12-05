@@ -53,7 +53,7 @@ export default function PerguntaIndividual(props) {
 
     if (estadoDaCarta === 0) {
         //fechado
-        return <Carta ><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}} data-test="flashcard-text" >Pergunta {props.index + 1}</Pergunta><img src={icone} alt="icone" onClick={() => setestadoDaCarta(1)} data-test={data} /></Carta>
+        return <Carta data-test="flashcard"><Pergunta style={{color: `${cor}`,textDecoration:`${linha}`}} data-test="flashcard-text" >Pergunta {props.index + 1}</Pergunta><img src={icone} alt="icone" onClick={() => setestadoDaCarta(1)} data-test={data} /></Carta>
 
     } else {
         if (estadoDaCarta === 1) {
